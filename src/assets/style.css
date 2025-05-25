@@ -1,0 +1,645 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(242, 97, 136);
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.links-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 6vh;
+    margin-left: 78vh;
+}
+
+.nav ul li {
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: rgb(242, 97, 136);
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: rgb(132, 0, 93);
+}
+
+/* SEARCH/PESQUISA */
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-left: 45vh;
+}
+
+.input-search {
+    background-color: rgb(242, 97, 136);
+    padding: 6px 10px;
+    border-radius: 15px;
+    border: 1px solid white;
+    outline: none;
+}
+
+.input-search::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+.icon {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.bag {
+    width: 23px;
+    margin-left: 10px;
+
+}
+
+/* CARDS */
+.container {
+    position: relative;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+}
+
+.container .card {
+    margin-top: 80px;
+    left: 30vh;
+    right: 0;
+    position: relative;
+    width: 280px;
+    height: 215px;
+    background-color: rgb(246, 245, 246);
+    padding: 23px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: height 0.3s;
+    border-radius: 10px;
+}
+
+.container .card:hover {
+    height: 430px;
+}
+
+.container .card .img-card {
+    position: relative;
+    width: 180px;
+    height: 260px;
+    top: -60px;
+    left: 50px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.container .card .img-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.container .card .info-card {
+    position: relative;
+    padding: 10px 15px;
+    text-align: center;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .info-card {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -55px;
+    transition-delay: 0.3s;
+}
+
+.container .card .info-card h1 {
+    font-size: 18px;
+}
+
+.container .card .info-card p {
+    font-size: 15px;
+    color: rgb(106, 106, 106);
+}
+
+.title-card {
+    margin-top: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+/* SOBRE NÓS */
+.sobre-nos {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+    background-color: rgb(246, 245, 246);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 10vh auto;
+    width: 60%;
+}
+
+.sobre-nos img {
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-texto h1 {
+    margin: 10px 0;
+    color: rgb(242, 97, 136);
+
+}
+
+.sobre-texto p {
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* INFORMAÇÕES */
+.informacoes {
+    height: 35vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+
+.texto-informacoes {
+    margin-top: 5vh;
+    max-width: 650px;
+    text-align: left;
+    margin-left: 17vh;
+}
+
+.texto-informacoes h1 {
+    max-width: 700px;
+    font-size: 45px;
+    margin: 0 0 20px 0;
+    color: rgb(242, 97, 136);
+    font-family: 'Pacifico', cursive;
+    line-height: 1;
+
+}
+
+.texto-informacoes p {
+    font-size: 20px;
+    color: black;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    line-height: 1.2;
+}
+
+.texto-informacoes button {
+    background-color: rgb(242, 97, 136);
+    color: black;
+    border-radius: 15px;
+    padding: 5px;
+    border: none;
+    width: 180px;
+    margin-left: 21vh;
+    font-weight: bold;
+}
+
+.texto-informacoes button a {
+    text-decoration: none;
+    color: white;
+}
+
+.texto-informacoes button:hover {
+    background-color: rgb(251, 144, 173);
+}
+
+#img-info {
+    position: relative;
+    left: 74%;
+    animation: animação1 3s forwards;
+    animation-delay: 1s;
+}
+
+#img-info img {
+    width: 400px;
+
+}
+
+#img-info2 {
+    position: relative;
+    width: 200px;
+    animation: animação 3s forwards;
+    animation-delay: 1s;
+}
+
+
+@keyframes animação {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: translateX(270px);
+    }
+
+    100% {
+        transform: translateX(0.1);
+    }
+}
+
+@keyframes animação1 {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: translateX(-270px);
+    }
+
+    100% {
+        transform: translateX(0.1);
+    }
+}
+
+/* FOOTER */
+
+.barbie-footer {
+    background-color: rgb(246, 245, 246);
+    color: rgb(0, 0, 0);
+    padding: 40px 20px 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin-top: 10vh;
+}
+
+.barbie-footer2 h4 {
+    color: rgb(0, 0, 0);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+h4 {
+    color: rgb(242, 97, 136);
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    /* scale serve para aumentar a imagem  */
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 14px;
+    position: relative;
+}
+
+.footer-bottom .barbie-logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 80px;
+}
+
+.contact-section p:hover {
+    text-decoration: underline;
+}
+
+/* CARDS DE COMPRA */
+
+.titlePage h1 {
+    color: white;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#app {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin-bottom: 50px;
+}
+
+.cardCompra {
+    width: 280px;
+    height: 370px;
+    background-color: rgb(246, 245, 246);
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.cardCompra:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px 12px 0 0;
+}
+
+.cardCompra h2 {
+    font-size: 1rem;
+    color: #d63384;
+    margin: 0.8rem 0 0.3rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.cardCompra p {
+    font-size: 0.85rem;
+    color: #555;
+    padding: 0 0.5rem;
+    font-family: 'Segoe UI', sans-serif;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.cardCompra #preco {
+    color: #075a03;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+}
+
+.cardCompra button {
+    background-color: #d63384;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 8px;
+    width: 82px;
+}
+
+.cardCompra button:hover {
+    background-color: #f760ab;
+}
+
+.cardCompra button a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-sold-out {
+    cursor: not-allowed;
+}
+
+.cardCompra :disabled {
+    background-color: #555;
+}
+
+.cardCompra button:disabled:hover {
+    background-color: #555;
+}
+
+.adicionar {
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    width: 82px;
+}
+
+.adicionar img {
+    margin-left: 8vh;
+}
+
+.link-boneca {
+    text-decoration: none;
+}
+
+/* CARROSSEL DE IMAGENS*/
+
+.carrossel {
+    display: flex;
+    overflow: hidden;
+}
+
+.cardCarrossel {
+    flex: 1;
+    height: 200px;
+    overflow: hidden;
+    transition: 0.3s all ease;
+}
+
+.cardCarrossel:hover {
+    flex: 2;
+}
+
+.cardCarrossel img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+
+/* SACOLA */
+
+.sacola-body {
+    background-color: rgb(255, 255, 255);
+}
+
+header h1 {
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    margin-top: 10vh;
+    color: #d63384;
+}
+
+.carrinho-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f06292;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.sacola-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.sacola-tabela th,
+.sacola-tabela td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sacola-total {
+    margin-left: 75%;
+    bottom: 0;
+    margin-bottom: 2vh;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-finalizar {
+    background-color: #3a6c3d;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 1rem;
+    height: 40px;
+    padding: 0.5rem 1rem;
+    margin-top: 30vh;
+}
+
+.botao-finalizar:hover {
+    background-color: #376637;
+}
+
+.sacola-total h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #000000;
+    flex-grow: 1;
+    margin-top: 2vh;
+    margin-top: 30vh;
+}
+
+.quantidade-input {
+    width: 50px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 7px;
+}
+
+.remover-btn {
+    background-color: rgb(221, 32, 32);
+    padding: 5px;
+    color: #fff;
+    border-radius: 7px;
+}
+
+.remover-btn:hover {
+    background-color: rgb(173, 28, 28);
+}

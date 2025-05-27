@@ -619,17 +619,16 @@ main {
 
 .sacola-total h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #000000;
     flex-grow: 1;
-    margin-top: 2vh;
-    margin-top: 30vh;
+    margin-right: 10vh;
 }
 
-.quantidade-input {
+.quantidade-input h2 {
     width: 50px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 7px;
 }
 

@@ -1,68 +1,12 @@
 <template>
   <div>
-    <nav class="nav">
-      <div class="logo">
-        <img src="@/assets/imagens/logos/logo-nav.png" alt="logo menu" />
-      </div>
-
-      <div class="links-nav">
-        <ul>
-          <li>
-            <RouterLink to="/index">Home</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/bonecas">Bonecas</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/saiba-mais">Saiba Mais</RouterLink>
-          </li>
-        </ul>
-      </div>
-
-      <div class="search-box">
-        <input type="text" placeholder="O que procura?" class="input-search" />
-        <img class="icon" src="@/assets/imagens/icons/lupa.png" alt="lupa de pesquisa" />
-      </div>
-
-      <div class="bag">
-        <RouterLink to="/sacola">
-          <img src="@/assets/imagens/icons/bag.png" alt="sacola" />
-        </RouterLink>
-      </div>
-    </nav>
-
-    <section class="titlePage">
-      <h1>Bonecas</h1>
-    </section>
-
-    <section class="cards-container">
-      <div v-for="card in cards" :key="card.title" class="cardCompra">
-        <img :src="card.image" alt="Imagem da boneca" class="card-img" />
-        <h2>{{ card.title }}</h2>
-        <p>{{ card.description }}</p>
-        <div class="card-footer">
-          <span class="preco">R$ {{ card.valor }}</span>
-          <button @click="adicionar(card)" :class="[
-            card.inStock === 0 ? 'btn-sold-out' : '',
-            card.inStock > 0 && card.inStock < 5 ? 'btn-running-out' : ''
-          ]" :style="card.inStock > 0 && card.inStock < 5 ? { width: '100px' } : {}" :disabled="card.inStock === 0">
-            {{ buttonText(card.inStock) }}
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <footer class="barbie-footer">
-      <div class="footer-content">
-        <div class="contact-section">
-          <h4>Contato</h4>
-          <p>Telefone: (00)00000-0000</p>
-          <p>Email: barbie@gmail.com</p>
-          <p>CEP: 00000-000</p>
+    <div class="homeView">
+      <nav class="nav">
+        <div class="logo">
+          <img src="@/assets/imagens/logos/logo-nav.png" alt="logo menu" />
         </div>
 
-        <div class="footer-links">
-          <h4>Explore</h4>
+        <div class="links-nav">
           <ul>
             <li>
               <RouterLink to="/index">Home</RouterLink>
@@ -76,20 +20,79 @@
           </ul>
         </div>
 
-        <div class="social-media">
-          <h4>Siga a Barbie</h4>
-          <div class="social-icons">
-            <a href="#"><img src="@/assets/imagens/icons/instagram.png" alt="Instagram" /></a>
-            <a href="#"><img src="@/assets/imagens/icons/facebook.png" alt="Facebook" /></a>
-            <a href="#"><img src="@/assets/imagens/icons/youtube.png" alt="YouTube" /></a>
+        <div class="search-box">
+          <input type="text" placeholder="O que procura?" class="input-search" />
+          <img class="icon" src="@/assets/imagens/icons/lupa.png" alt="lupa de pesquisa" />
+        </div>
+
+        <div class="bag">
+          <RouterLink to="/sacola">
+            <img src="@/assets/imagens/icons/bag.png" alt="sacola" />
+          </RouterLink>
+        </div>
+      </nav>
+
+
+      <section class="titlePage">
+        <h1>Bonecas</h1>
+      </section>
+
+      <section class="cards-container">
+        <div v-for="card in cards" :key="card.title" class="cardCompra">
+          <img :src="card.image" alt="Imagem da boneca" class="card-img" />
+          <h2>{{ card.title }}</h2>
+          <p>{{ card.description }}</p>
+          <div class="card-footer">
+            <span class="preco">R$ {{ card.valor }}</span>
+            <button @click="adicionar(card)" :class="[
+              card.inStock === 0 ? 'btn-sold-out' : '',
+              card.inStock > 0 && card.inStock < 5 ? 'btn-running-out' : ''
+            ]" :style="card.inStock > 0 && card.inStock < 5 ? { width: '100px' } : {}" :disabled="card.inStock === 0">
+              {{ buttonText(card.inStock) }}
+            </button>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Barbie™ - Todos os direitos reservados.</p>
-        <img src="@/assets/imagens/logos/logo-nav.png" alt="Barbie Logo" class="barbie-logo" />
-      </div>
-    </footer>
+      </section>
+
+      <footer class="barbie-footer">
+        <div class="footer-content">
+          <div class="contact-section">
+            <h4>Contato</h4>
+            <p>Telefone: (00)00000-0000</p>
+            <p>Email: barbie@gmail.com</p>
+            <p>CEP: 00000-000</p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Explore</h4>
+            <ul>
+              <li>
+                <RouterLink to="/index">Home</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/bonecas">Bonecas</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/saiba-mais">Saiba Mais</RouterLink>
+              </li>
+            </ul>
+          </div>
+
+          <div class="social-media">
+            <h4>Siga a Barbie</h4>
+            <div class="social-icons">
+              <a href="#"><img src="@/assets/imagens/icons/instagram.png" alt="Instagram" /></a>
+              <a href="#"><img src="@/assets/imagens/icons/facebook.png" alt="Facebook" /></a>
+              <a href="#"><img src="@/assets/imagens/icons/youtube.png" alt="YouTube" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Barbie™ - Todos os direitos reservados.</p>
+          <img src="@/assets/imagens/logos/logo-nav.png" alt="Barbie Logo" class="barbie-logo" />
+        </div>
+      </footer>
+    </div>
   </div>
 </template>
 
@@ -335,7 +338,7 @@ export default {
   methods: {
     buttonText(inStock) {
       if (inStock === 0) return "Esgotado";
-      if (inStock < 5) return `Restam ${inStock}`;
+      if (inStock < 5) return `Apenas ${inStock}`;
       return "Comprar";
     },
     adicionar(card) {
@@ -362,6 +365,10 @@ export default {
 
 <style scoped>
 @import "@/assets/style.css";
+
+.homeView {
+  background-color: rgb(242, 97, 136);
+}
 
 .cards-container {
   display: flex;
